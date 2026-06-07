@@ -1,6 +1,7 @@
 import {
   FlatList,
-  View
+  View,
+  Text
 } from "react-native";
 
 import {
@@ -30,14 +31,29 @@ export default function EventsScreen() {
 
   return (
 
-    <View   style={{
-    flex: 1,
-    backgroundColor: "#f2f4f7",
-  }}
->
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "#f2f4f7",
+        padding: 15
+      }}
+    >
+
+      <Text
+        style={{
+          fontSize: 12,
+          color: "#666",
+          marginBottom: 10,
+          textAlign: "center"
+        }}
+      >
+        A primeira consulta pode levar até 3 minutos,
+        pois a API está acordando....
+      </Text>
 
       <FlatList
         data={events}
+        keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) =>
           <EventCard item={item} />
         }
