@@ -32,7 +32,10 @@ export default function AlertsScreen() {
 
   return (
 
-    <View style={{ flex: 1 }}>
+    <View style={{
+    flex: 1,
+    backgroundColor: "#f2f4f7",
+  }}>
 
       <FlatList
         data={alerts}

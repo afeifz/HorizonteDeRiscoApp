@@ -3,7 +3,9 @@ import { View, Text, Button } from "react-native";
 export default function HomeScreen({ navigation }: any) {
 
   return (
-    <View style={{ padding: 20 }}>
+    <View style={{ padding: 20,
+        gap: 10
+    }}>
 
       <Text>
         Horizonte de Risco
